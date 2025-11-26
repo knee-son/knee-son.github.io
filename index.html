@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Charniel Duterte — Portfolio</title>
+  <meta name="description" content="Charniel Duterte — AI Engineer & Game Developer. Portfolio page." />
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#94a3b8; --accent:#7c3aed; --glass: rgba(255,255,255,0.04);
+      --maxw:1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:linear-gradient(180deg,#071028 0%, var(--bg) 100%); color:#e6eef8; -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale; padding:32px 16px;
+    }
+    .container{max-width:var(--maxw); margin:0 auto}
+    header{display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:28px}
+    .brand{display:flex; align-items:center; gap:12px}
+    .logo{width:52px; height:52px; border-radius:10px; display:grid; place-items:center; background:linear-gradient(135deg,var(--accent),#0ea5a4); font-weight:700}
+    h1{margin:0; font-size:28px}
+    nav a{color:var(--muted); text-decoration:none; margin-left:16px}
+
+    .hero{display:grid; grid-template-columns:1fr 360px; gap:28px; align-items:center; margin-bottom:32px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius:14px; padding:28px; box-shadow:0 6px 30px rgba(2,6,23,0.6); border:1px solid rgba(255,255,255,0.03)}
+
+    .hero-left h2{font-size:36px; margin:0 0 12px}
+    .hero-left p.lead{color:var(--muted); margin:0 0 18px}
+    .cta-row{display:flex; gap:12px}
+    .btn{padding:10px 14px; border-radius:10px; background:var(--accent); color:white; text-decoration:none; font-weight:600}
+    .btn.ghost{background:transparent; border:1px solid rgba(255,255,255,0.06); color:var(--muted)}
+
+    .about{display:flex; gap:18px; align-items:center}
+    .avatar{width:84px; height:84px; border-radius:12px; background:linear-gradient(135deg,#e0e7ff, #c7f9f1); color:#071028; display:grid; place-items:center; font-weight:700}
+
+    .sidebar .stat{display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px dashed rgba(255,255,255,0.02)}
+
+    .projects{display:grid; grid-template-columns:repeat(2,1fr); gap:16px}
+    .project-card{padding:14px; border-radius:10px; background:var(--card); border:1px solid rgba(255,255,255,0.02)}
+    .project-card h3{margin:0 0 8px}
+    .skills{display:flex; flex-wrap:wrap; gap:8px}
+    .chip{padding:8px 10px; border-radius:999px; background:var(--glass); color:var(--muted); font-weight:600}
+
+    footer{color:var(--muted); text-align:center; margin-top:36px}
+
+    @media (max-width:880px){
+      .hero{grid-template-columns:1fr;}
+      .projects{grid-template-columns:1fr}
+      header{flex-direction:column; align-items:flex-start}
+    }
+
+    /* small animations */
+    [data-fade]{opacity:0; transform:translateY(10px); transition:all .6s cubic-bezier(.2,.8,.2,1)}
+    [data-fade].visible{opacity:1; transform:none}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">CD</div>
+        <div>
+          <div style="font-size:13px;color:var(--muted)">Portfolio</div>
+          <div style="font-weight:700">Charniel Duterte</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <img class="knight" src="https://commons.wikimedia.org/wiki/File:WHITE_CHESS_KNIGHT.svg" style="position:absolute; top:20px; right:20px; width:64px; height:64px; cursor:pointer; transition:opacity .2s" onmouseover="this.src='https://media.tenor.com/Gk0VnJqR5n8AAAAM/horse-horse-reaction.gif'" onmouseout="this.src='https://upload.wikimedia.org/wikipedia/commons/2/28/Chess_nlt45.svg'" />
+</header>
+
+    <section class="hero">
+      <div class="card hero-left" data-fade>
+        <div class="about">
+          <div class="avatar">CD</div>
+          <div>
+            <h2>Hi, I'm Charniel</h2>
+            <p class="lead">I do AI Engineering and also do Game Dev!</p>
+          </div>
+        </div>
+
+        <p style="color:var(--muted); margin-top:16px">I'm an engineer focused on building production-ready AI systems and playable game experiences. I design pipelines for model deployment, evaluation, and integrate machine learning into real products. I also create game prototypes — gameplay, tools, and shaders.</p>
+
+        <div class="cta-row" style="margin-top:18px">
+          <a class="btn" href="#contact">Hire / Contact</a>
+          <a class="btn ghost" href="#projects">See Work</a>
+        </div>
+      </div>
+
+      <aside class="card sidebar" data-fade>
+        <div style="font-weight:700; margin-bottom:10px">Quick Info</div>
+        <div class="stat"><div>Location</div><div>Philippines</div></div>
+        <div class="stat"><div>Role</div><div>AI Engineer • Game Dev</div></div>
+        <div class="stat"><div>Open to</div><div>Freelance / Contract</div></div>
+        <div style="margin-top:12px">
+          <div style="font-weight:700; margin-bottom:8px">Contact</div>
+          <div style="font-size:14px; color:var(--muted)">charniel@example.com</div>
+          <div style="font-size:13px; color:var(--muted); margin-top:8px">Github • Twitter • LinkedIn (links)</div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="projects" class="card" data-fade>
+      <h3 style="margin-top:0">Projects</h3>
+      <div class="projects">
+        <div class="project-card">
+          <h3>AI Pipeline Engine</h3>
+          <div style="color:var(--muted); font-size:14px">A modular inference & monitoring pipeline for deploying language models with observability and autoscaling.</div>
+          <div style="margin-top:10px"><span class="chip">Python</span> <span class="chip">Docker</span> <span class="chip">Kubernetes</span></div>
+        </div>
+        <div class="project-card">
+          <h3>Roguelike Prototype</h3>
+          <div style="color:var(--muted); font-size:14px">A small procedural dungeon + combat prototype with item systems and simple AI behaviors.</div>
+          <div style="margin-top:10px"><span class="chip">Unity</span> <span class="chip">C#</span> <span class="chip">Shaders</span></div>
+        </div>
+        <div class="project-card">
+          <h3>Recommendation Microservice</h3>
+          <div style="color:var(--muted); font-size:14px">Embedding-based search with pgvector and a lightweight API for similarity queries.</div>
+          <div style="margin-top:10px"><span class="chip">FastAPI</span> <span class="chip">Postgres</span> <span class="chip">pgvector</span></div>
+        </div>
+        <div class="project-card">
+          <h3>Procedural Terrain Tool</h3>
+          <div style="color:var(--muted); font-size:14px">Editor tool for generating varied terrain and biomes — exportable heightmaps and splatmaps.</div>
+          <div style="margin-top:10px"><span class="chip">C++</span> <span class="chip">Tooling</span> <span class="chip">Assets</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="card" style="margin-top:18px" data-fade>
+      <h3 style="margin-top:0">Skills</h3>
+      <div style="margin-top:8px" class="skills">
+        <div class="chip">Machine Learning</div>
+        <div class="chip">PyTorch</div>
+        <div class="chip">FastAPI</div>
+        <div class="chip">Docker</div>
+        <div class="chip">Kubernetes</div>
+        <div class="chip">Unity</div>
+        <div class="chip">C#</div>
+        <div class="chip">Shaders</div>
+        <div class="chip">Postgres</div>
+        <div class="chip">pgvector</div>
+      </div>
+    </section>
+
+    <section id="contact" class="card" style="margin-top:18px" data-fade>
+      <h3 style="margin-top:0">Contact</h3>
+      <p style="color:var(--muted); margin-bottom:12px">Interested in working together? Send an email or connect on GitHub / LinkedIn.</p>
+      <form onsubmit="event.preventDefault(); alert('Email copied to clipboard — replace with real action.'); navigator.clipboard?.writeText('charniel@example.com')" style="display:flex; gap:8px; flex-wrap:wrap">
+        <input placeholder="Your email" required style="flex:1; min-width:180px; padding:10px; border-radius:10px; border:1px solid rgba(255,255,255,0.04); background:transparent; color:inherit">
+        <input placeholder="Message" required style="flex:2; min-width:220px; padding:10px; border-radius:10px; border:1px solid rgba(255,255,255,0.04); background:transparent; color:inherit">
+        <button class="btn" type="submit">Send</button>
+      </form>
+      <div style="margin-top:12px; color:var(--muted)">Or: <a href="mailto:charniel@example.com" style="color:inherit; text-decoration:underline">charniel@example.com</a></div>
+    </section>
+
+    <footer>
+      <div style="font-size:13px">Made with ❤️ — Charniel Duterte • <small style="color:var(--muted)">Single-file HTML portfolio</small></div>
+    </footer>
+  </div>
+
+  <script>
+    // simple reveal on scroll
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting) e.target.classList.add('visible');
+      })
+    }, {threshold:0.08});
+    document.querySelectorAll('[data-fade]').forEach(el=>io.observe(el));
+  </script>
+</body>
+</html>
